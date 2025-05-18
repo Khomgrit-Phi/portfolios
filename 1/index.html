@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Khomgrit Phinitkit.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title">Khomgrit Phinitkitti.</div><br>
+    <div id="links">
+        <a href="#skills">experience</a>
+        <a href="#work" style="margin:0px 60px;">works</a>
+        <a href="#contact">contact</a>
+    </div>
+    </div>
+
+    <center>
+    <div id="middle">
+        <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
+                I'm a creative developer and 3D motion designer with a passion for blending design and technology. I build full-stack web applications and craft visually engaging 3D animations to deliver immersive, user-centered digital experiences.
+
+
+        </div>
+    </div>
+    </center>
+
+    <div id="portfolio">
+             <div id="skills">
+                 <h1>experience.</h1>   
+                    <div>
+                    <p>
+                        <strong>Bootcamp Junior Software Developer</strong> | Generation Thailand | Feb 2025 - May 2025<br>
+                        - Developed full-stack web applications using React, Node.js, Express, MongoDB, and MySQL.<br>
+                        - Contributed to team projects, improving skills in problem-solving, collaboration, and time management.
+                    </p>
+                    <p style="margin-top: 1em;">
+                        <strong>Freelance 3D Artist / Motion Designer</strong> | May 2018 - Present<br>
+                        - Collaborated effectively with both local and international teams under tight deadlines while maintaining high standards to ensure customer satisfaction.<br>
+                        - Continuously learned and updated knowledge of new tools and technologies to improve work efficiency and productivity.<br>
+                        - Analyzed and identified root causes of issues, demonstrating strong problem-solving skills and a commitment to resolving technical challenges.
+                    </p>
+                    </div>
+
+             </div>
+         
+              <div id="work">
+                 <h1>works.</h1>
+
+                 <div class="project">
+                 <h2>Custommike?</h2>
+                 <div>Our e-commerce platform empowers creators, artists, and entrepreneurs to turn their ideas into real products and build their own brands—without the need for upfront investment or inventory. Anyone can upload their custom designs and showcase them on a variety of products such as t-shirts, mugs, bags, and more.</div>
+                 <button class="btn_one" onclick="window.open('https://seal-over-the-walls.vercel.app/', '_blank')">
+                    visit project
+                    </button>
+
+                </div>
+
+                <div class="project">
+                 <h2>OP-1 Interactive Experience</h2>
+                 <div>LThis project is a 3D interactive showcase of the iconic Teenage Engineering OP-1 synthesizer, designed to blend functionality with visual storytelling. Built using modern web technologies like React, Three.js, and GSAP, the experience lets users explore the OP-1 from multiple angles, interact with its controls, and discover its features through smooth animations and engaging visuals.
+                 </div>
+                 <button class="btn_one" onclick="window.open('https://op-1-azure.vercel.app/', '_blank')">visit project</button>
+                 <button class="btn_two" onclick="window.open('https://github.com/Khomgrit-Phi/op-1.git', '_blank')">code</button>
+                </div>
+
+                 <div class="project">
+                 <h2>3D Motion Designer Shoreel</h2>
+                 <div>My showreel is a curated selection of my best work as a 3D Motion Designer, showcasing a range of projects that highlight my skills in animation, visual storytelling, and design. It includes commercial spots, product animations, branding sequences, and experimental visuals—demonstrating versatility in both creative direction and technical execution.</div>
+                 <button class="btn_one" onclick="window.open('https://vimeo.com/538537747', '_blank')">
+                    Show reel
+                    </button>
+
+             </div>
+         
+              <div id="contact">
+                <h1>contact.</h1> 
+                    <form id="contact-form">
+                    <input type="text" name="name" placeholder="name" required>
+                    <input type="email" name="email" placeholder="email" required><br>
+                    <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
+                    <button type="submit" class="btn_one">send</button>
+                    </form>
+
+                    <div id="success-message" style="display:none; color: green; margin-top: 1rem;">
+                    ✅ Your message has been sent!
+                    </div>
+
+                    <script>
+                    const form = document.getElementById("contact-form");
+                    form.addEventListener("submit", async function (e) {
+                        e.preventDefault();
+
+                        const formData = new FormData(form);
+                        await fetch("https://formsubmit.co/yourname@example.com", {
+                        method: "POST",
+                        body: formData
+                        });
+
+                        form.reset();
+                        document.getElementById("success-message").style.display = "block";
+                    });
+                    </script>
+
+
+                 <!-- <div id="details">
+                    <a class="btn_social"><i class="fas fa-phone"></i></a>
+                    <a class="btn_social"><i class="fas fa-at"></i></a>
+                    <a class="btn_social"><i class="fab fa-twitter"></i></a>
+                    <a class="btn_social"><i class="fab fa-dribbble"></i></a>
+                 </div>    -->
+             </div>
+    </div>
+    <div id="footer">
+        made with love<br><br> <a href="https://github.com/Khomgrit-Phi">Ton®</a>
+    </div>
+<script src="index.js" type="text/javascript"></script>
+</body>
+</html>
