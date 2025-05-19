@@ -121,7 +121,7 @@ body,html {
     /* line-height: 1.5rem; */
     margin:4vh 0px !important;
     padding:2vh 0px !important;
-    background: url("https://vimeo.com/750164608?share=copy#t=0");
+    
 }
 #work {
     /* line-height: 1.5rem; */
@@ -241,11 +241,18 @@ body,html {
         margin:0px;
     }
     #middle {
-        width:100%;
-        border-radius:0px;
-        height:80vh;
-        background-size:cover;
-    }
+  width: 100%;
+  height: 80vh;
+  border-radius: 0px;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  white-space: normal;
+}
+
     #tagline {
         
         width:90%;
@@ -321,4 +328,71 @@ button:focus {
 0% {background-position: 0% 50%}
 50% {background-position: 100% 50%}
 100% {background-position: 0% 50%}
+}
+
+#video {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensures it covers at least the full screen */
+  overflow: hidden;
+  z-index: 1;
+}
+
+ #video video#loading-bg-video {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  
+} 
+
+/* Ensure portfolio content is above video */
+#portfolio {
+  position: relative;
+  z-index: 2;
+}
+
+.video-blur-edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(5px);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh; /* Or 100vh depending on how tall you want it */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 120%;
+  border: none;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
